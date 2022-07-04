@@ -33,6 +33,17 @@ struct ContentView: View {
 			.accessibilityLabel(labels[selectedPicture])
 			.accessibilityAddTraits(.isButton)
 			.accessibilityRemoveTraits(.isImage)
+		
+		Image(decorative: "character")
+			.accessibilityHidden(true)
+		
+		VStack{
+			Text("Your score is")
+			Text("1000")
+				.font(.title)
+		}
+		.accessibilityElement(children: .ignore)
+		.accessibilityLabel("Your score is 1000")
     }
 }
 
